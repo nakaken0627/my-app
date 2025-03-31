@@ -1,1 +1,7 @@
-export const navLists = ["010_TodoList", "020_ItemList", "030_List"];
+export const navLists = [
+  "010_TodoList",
+  "011_TodoListFile",
+  "020_TVShowSearch",
+  "030_Game",
+  "040_ReactPractice",
+];

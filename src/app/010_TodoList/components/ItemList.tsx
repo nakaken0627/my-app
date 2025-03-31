@@ -1,4 +1,5 @@
 import { Todo } from "../page";
+//↑インポートタイプにするとバグった
 // import { useMemo } from "react";
 
 type ItemListProps = {
@@ -34,14 +35,14 @@ export const ItemList: React.FC<ItemListProps> = ({ todos, setTodos }) => {
             </li>
           ))}
       </ul>
-      <button
+      {/* <button
         onClick={() => {
           // setTodos((preTodos) => preTodos.filter((todo) => !todo.checked));
           setTodos((preTodos) => preTodos.filter((todo) => !todo.checked));
         }}
       >
         まとめて削除
-      </button>
+      </button> */}
       <ul>
         <h2>実行済一覧</h2>
 
