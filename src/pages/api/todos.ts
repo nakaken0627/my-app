@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { readTodos, writeTodos } from "../../011_TodoListFile/utils/fileUtils";
+import { readTodos, writeTodos } from "../../app/011_TodoListFile/utils/fileUtils";
 
 export default async function handler(
   req: NextApiRequest,
@@ -19,6 +19,8 @@ export default async function handler(
     todos.push(newTodo);
     await writeTodos(todos);
     res.status(201).json(newTodo);
+    return
+
   } else if (req.method === "PUT") {
     const updateTodo = req.body;
     const todos = await readTodos();
@@ -27,6 +29,7 @@ export default async function handler(
     );
     await writeTodos(updatedTodos);
     res.status(200).json(updateTodo);
+
   } else if (req.method === "DELETE") {
     const deleteTodo = req.body;
     const todos = await readTodos();
@@ -35,7 +38,9 @@ export default async function handler(
     );
     await writeTodos(filteredTodos);
     res.status(200).json(deleteTodo);
+
   } else {
     res.status(405).end(); // Method Not Allowed
   }
+
 }
