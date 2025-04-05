@@ -1,7 +1,10 @@
 import fs from "fs/promises";
 import path from "path";
 
-const filePath = path.join(process.cwd(), "src/app/011_TodoListFile/public/todos.json");
+const filePath = path.join(
+  process.cwd(),
+  "app/011_TodoListFile/public/todos.json"
+);
 
 export type Todo = {
   id: number;

@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "text": "買い物に行く",
+    "checked": false
+  },
+  {
+    "id": 2,
+    "text": "宿題をする",
+    "checked": false
+  },
+  {
+    "id": 3,
+    "text": "hh",
+    "checked": false
+  },
+  {
+    "id": 4,
+    "text": "aa",
+    "checked": false
+  },
+  {
+    "id": 5,
+    "text": "aa",
+    "checked": false
+  },
+  {
+    "id": 6,
+    "text": "aaa",
+    "checked": false
+  },
+  {
+    "id": 7,
+    "checked": true
+  }
+]
