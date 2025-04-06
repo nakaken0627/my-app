@@ -1,10 +1,9 @@
 // import type { NextApiRequest, NextApiResponse } from "next";
 import { NextRequest, NextResponse } from "next/server";
-import { readTodos } from "../../011_TodoListFile/utils/fileUtils";
+import { readTodos, writeTodos } from "../../011_TodoListFile/utils/fileUtils";
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
-    console.log(request);
     const todos = await readTodos();
     return NextResponse.json(todos, { status: 200 });
   } catch (error) {
@@ -16,19 +15,19 @@ export async function GET(request: NextRequest) {
   }
 }
 
-// export default async function handler(
-//   req: NextApiRequest,
-//   res: NextApiResponse
-// ) {
-//   //GET
-//   if (req.method === "GET") {
-//     try {
-//       const todos = await readTodos();
-//       res.status(200).json(todos);
-//     } catch (error) {
-//       console.error("API error", error);
-//       res.status(500).json({ error: "internal server Error" });
-//     }
+export async function POST(request: NextRequest) {
+  try {
+    const reqBody = await request.json();
+    // console.log(reqBody);
+    const todos = await readTodos();
+    todos.push(reqBody);
+    await writeTodos(todos);
+    return NextResponse.json(reqBody, { status: 201 });
+  } catch (error) {
+    console.log("API error during POST", error);
+    return NextResponse.json({ error: "Failed to add todo" }, { status: 500 });
+  }
+}
 
 //     //POST
 //   } else if (req.method === "POST") {
