@@ -24,7 +24,7 @@ export async function readTodos() {
   }
 }
 
-export async function writeTodos(todos: Todo) {
+export async function writeTodos(todos: Todo[]) {
   try {
     // throw new Error("Intentional error for testing");
     await fs.writeFile(filePath, JSON.stringify(todos, null, 2));
