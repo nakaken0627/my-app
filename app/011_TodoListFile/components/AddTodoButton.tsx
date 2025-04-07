@@ -1,4 +1,5 @@
 import type { Todo } from "../page";
+import axios from "axios";
 
 type AddTodoButtonProps = {
   todos: Todo[];
@@ -17,15 +18,23 @@ export const AddTodoButton: React.FC<AddTodoButtonProps> = ({
     setInputText(e.target.value);
   };
 
-  const addTodo = (e: React.FormEvent) => {
+  const addTodo = async (e: React.FormEvent) => {
     e.preventDefault();
     if (inputText.trim() !== "") {
-      setTodos([
-        ...todos,
-        { id: todos.length + 1, text: inputText, checked: false },
-      ]);
+      const newTodo: Todo = {
+        id: todos.length + 1,
+        text: inputText,
+        checked: false,
+      };
+
+      try {
+        const response = await axios.post("/api/todos", newTodo);
+        if ((response.status = 201)) {
+          setTodos([...todos, response.data]);
+          setInputText("");
+        }
+      } catch {}
     }
-    setInputText("");
   };
 
   return (

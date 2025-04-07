@@ -1,9 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ItemList } from "./components/ItemList";
 import { AddTodoButton } from "./components/AddTodoButton";
+
+import axios from "axios";
 
 export type Todo = {
   id: number;
@@ -18,6 +20,19 @@ export const TodoList: React.FC = () => {
     { id: 2, text: "Todo2", checked: false },
   ]);
 
+  const GetApiList = async () => {
+    try {
+      const res = await axios.get("http://localhost:3000/api/todos");
+      setTodos(res.data);
+    } catch (err) {
+      console.error("API,error", err);
+    }
+  };
+
+  useEffect(() => {
+    GetApiList();
+  }, []);
+
   return (
     <>
       <header>
@@ -31,6 +46,8 @@ export const TodoList: React.FC = () => {
         setInputText={setInputText}
       />
       <ItemList todos={todos} setTodos={setTodos} />
+
+      <hr />
     </>
   );
 };

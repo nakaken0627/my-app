@@ -1,4 +1,5 @@
 import { Todo } from "../page";
+import axios from "axios";
 
 type ItemListProps = {
   todos: Todo[];
@@ -6,14 +7,27 @@ type ItemListProps = {
 };
 
 export const ItemList: React.FC<ItemListProps> = ({ todos, setTodos }) => {
-  const boxStateChange = (id: number) => {
-    setTodos((prevTodos) =>
-      prevTodos.map((prevTodo) => {
-        return prevTodo.id === id
-          ? { ...prevTodo, checked: !prevTodo.checked }
-          : prevTodo;
-      })
-    );
+  const boxStateChange = async (id: number, currentChecked: boolean) => {
+    const newChecked = !currentChecked;
+
+    try {
+      const response = await axios.put(`/api/todos/${id}`, {
+        checked: newChecked,
+      });
+      if (response.status === 200) {
+        setTodos((prevTodos) =>
+          prevTodos.map((prevTodo) => {
+            return prevTodo.id === id
+              ? { ...prevTodo, checked: !prevTodo.checked }
+              : prevTodo;
+          })
+        );
+      } else {
+        console.error("Todoの更新に失敗しました", response.status);
+      }
+    } catch (error) {
+      console.error("Todoの更新中にエラーが発生しました", error);
+    }
   };
 
   return (
@@ -27,7 +41,7 @@ export const ItemList: React.FC<ItemListProps> = ({ todos, setTodos }) => {
               <input
                 type="checkbox"
                 checked={todo.checked}
-                onChange={() => boxStateChange(todo.id)}
+                onChange={() => boxStateChange(todo.id, todo.checked)}
               />
               {todo.text}
             </li>
@@ -43,7 +57,7 @@ export const ItemList: React.FC<ItemListProps> = ({ todos, setTodos }) => {
               <input
                 type="checkbox"
                 checked={todo.checked}
-                onChange={() => boxStateChange(todo.id)}
+                onChange={() => boxStateChange(todo.id, todo.checked)}
               />
               {todo.text}
             </li>
