@@ -4,4 +4,5 @@ export const navLists = [
   "020_TVShowSearch",
   "030_Game",
   "040_ReactPractice",
+  "050_MyPractice",
 ];
