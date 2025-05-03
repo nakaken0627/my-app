@@ -2,7 +2,7 @@ import SearchFilter from "./components/SearchFilter";
 import TextForm from "./components/TextForm";
 import GenderForm from "./components/GenderForm";
 import DarkModeToggle from "./components/DarkModeToggle";
-// import ImageSwitcher from "./components/ImageSwitcher";
+import DoubleNumber from "./components/DoubleNumber";
 
 const MyPractice: React.FC = () => {
   return (
@@ -16,7 +16,9 @@ const MyPractice: React.FC = () => {
       {/* <ImageSwitcher /> */}
       <hr />
       <DarkModeToggle />
+      <br />
       <hr />
+      <DoubleNumber />
     </>
   );
 };
