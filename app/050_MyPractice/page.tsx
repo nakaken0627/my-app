@@ -3,6 +3,7 @@ import TextForm from "./components/TextForm";
 import GenderForm from "./components/GenderForm";
 import DarkModeToggle from "./components/DarkModeToggle";
 import DoubleNumber from "./components/DoubleNumber";
+import EmojiRandomizer from "./components/EmojiRandomaizer";
 
 const MyPractice: React.FC = () => {
   return (
@@ -19,6 +20,8 @@ const MyPractice: React.FC = () => {
       <br />
       <hr />
       <DoubleNumber />
+      <hr />
+      <EmojiRandomizer />
     </>
   );
 };
