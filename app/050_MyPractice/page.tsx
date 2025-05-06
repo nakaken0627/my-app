@@ -4,6 +4,11 @@ import GenderForm from "./components/GenderForm";
 import DarkModeToggle from "./components/DarkModeToggle";
 import DoubleNumber from "./components/DoubleNumber";
 import EmojiRandomizer from "./components/EmojiRandomaizer";
+import DynamicTags from "./components/×-DynamicTags";
+// import FavoriteAnimal from "./components/FavoriteAnimal";
+// import ErrorDisplay from "./components/ErrorDisplay";
+import WorkoutSelector from "./components/WorkoutSelector";
+// import TextPreview from "./components/TextPreview";
 
 const MyPractice: React.FC = () => {
   return (
@@ -22,6 +27,16 @@ const MyPractice: React.FC = () => {
       <DoubleNumber />
       <hr />
       <EmojiRandomizer />
+      <hr />
+      <DynamicTags />
+      <hr />
+      {/* <FavoriteAnimal />
+      <hr />
+      <ErrorDisplay /> */}
+      <hr />
+      <WorkoutSelector />
+      <hr />
+      {/* <TextPreview /> */}
     </>
   );
 };
