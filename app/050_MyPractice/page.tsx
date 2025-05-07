@@ -5,8 +5,8 @@ import DarkModeToggle from "./components/DarkModeToggle";
 import DoubleNumber from "./components/DoubleNumber";
 import EmojiRandomizer from "./components/EmojiRandomaizer";
 import DynamicTags from "./components/×-DynamicTags";
-// import FavoriteAnimal from "./components/FavoriteAnimal";
-// import ErrorDisplay from "./components/ErrorDisplay";
+import FavoriteAnimal from "./components/FavoriteAnimal";
+import ErrorDisplay from "./components/ErrorDisplay";
 import WorkoutSelector from "./components/WorkoutSelector";
 // import TextPreview from "./components/TextPreview";
 
@@ -30,9 +30,9 @@ const MyPractice: React.FC = () => {
       <hr />
       <DynamicTags />
       <hr />
-      {/* <FavoriteAnimal />
+      <FavoriteAnimal />
       <hr />
-      <ErrorDisplay /> */}
+      <ErrorDisplay />
       <hr />
       <WorkoutSelector />
       <hr />
