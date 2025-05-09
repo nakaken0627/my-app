@@ -8,7 +8,8 @@ import DynamicTags from "./components/×-DynamicTags";
 import FavoriteAnimal from "./components/FavoriteAnimal";
 import ErrorDisplay from "./components/ErrorDisplay";
 import WorkoutSelector from "./components/WorkoutSelector";
-// import TextPreview from "./components/TextPreview";
+import TextPreview from "./components/TextPreview";
+import StarRating from "./components/×-StarRating";
 
 const MyPractice: React.FC = () => {
   return (
@@ -36,7 +37,9 @@ const MyPractice: React.FC = () => {
       <hr />
       <WorkoutSelector />
       <hr />
-      {/* <TextPreview /> */}
+      <TextPreview />
+      <hr />
+      <StarRating />
     </>
   );
 };
