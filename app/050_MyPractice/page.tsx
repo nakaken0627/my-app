@@ -10,6 +10,7 @@ import ErrorDisplay from "./components/ErrorDisplay";
 import WorkoutSelector from "./components/WorkoutSelector";
 import TextPreview from "./components/TextPreview";
 import StarRating from "./components/×-StarRating";
+import LoginForm from "./components/LoginForm";
 
 const MyPractice: React.FC = () => {
   return (
@@ -40,6 +41,8 @@ const MyPractice: React.FC = () => {
       <TextPreview />
       <hr />
       <StarRating />
+      <hr />
+      <LoginForm />
     </>
   );
 };
