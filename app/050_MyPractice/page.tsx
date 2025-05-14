@@ -11,6 +11,7 @@ import WorkoutSelector from "./components/WorkoutSelector";
 import TextPreview from "./components/TextPreview";
 import StarRating from "./components/×-StarRating";
 import LoginForm from "./components/LoginForm";
+import InputToggle from "./components/InputToggle";
 
 const MyPractice: React.FC = () => {
   return (
@@ -43,6 +44,8 @@ const MyPractice: React.FC = () => {
       <StarRating />
       <hr />
       <LoginForm />
+      <hr />
+      <InputToggle />
     </>
   );
 };
