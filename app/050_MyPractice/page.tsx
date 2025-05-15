@@ -13,6 +13,7 @@ import StarRating from "./components/×-StarRating";
 import LoginForm from "./components/LoginForm";
 import InputToggle from "./components/InputToggle";
 import LikeButton from "./components/LikeButton";
+import MuscleTrainingApp from "./components/MuscleTrainingApp";
 
 const MyPractice: React.FC = () => {
   return (
@@ -49,6 +50,8 @@ const MyPractice: React.FC = () => {
       <InputToggle />
       <hr />
       <LikeButton />
+      <hr />
+      <MuscleTrainingApp />
     </>
   );
 };
