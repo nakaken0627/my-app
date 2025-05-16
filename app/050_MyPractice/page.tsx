@@ -14,6 +14,7 @@ import LoginForm from "./components/LoginForm";
 import InputToggle from "./components/InputToggle";
 import LikeButton from "./components/LikeButton";
 import MuscleTrainingApp from "./components/MuscleTrainingApp";
+import ZipcodeForm from "./components/ZipcodeForm";
 
 const MyPractice: React.FC = () => {
   return (
@@ -52,6 +53,8 @@ const MyPractice: React.FC = () => {
       <LikeButton />
       <hr />
       <MuscleTrainingApp />
+      <hr />
+      <ZipcodeForm />
     </>
   );
 };
