@@ -20,6 +20,8 @@ export default function ProductSearch() {
   const [inputValue, setInputValue] = useState("");
   const [selectedProductId, setSelectedProductId] = useState("");
 
+  console.log(inputValue);
+
   return (
     <div>
       <Autocomplete
