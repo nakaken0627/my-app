@@ -33,29 +33,29 @@ function MuscleTrainingApp() {
   return (
     <div className="p-4">
       {/* 身長と体重を入力するフォームを作成しよう */}
-      <div>
-        <label id="height">
-          身長(m):
+      <div className="">
+        <label id="height" className="w-10">
+          身長(m) :
           <input
             type="number"
             id="height"
             onChange={handleInputHeight}
             value={height}
             placeholder="身長を入力して下さい"
-            className="border border-white
+            className="border border-white ml-2
           "
           />
         </label>
       </div>
       <div>
         <label id="weight">
-          体重(kg):
+          体重(kg) :
           <input
             type="number"
             id="weight"
             onChange={handleInputWeight}
             placeholder="体重を入力して下さい"
-            className="border border-white"
+            className="border border-white ml-2"
           />
         </label>
       </div>
