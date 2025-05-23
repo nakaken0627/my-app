@@ -17,6 +17,7 @@ import MuscleTrainingApp from "./components/MuscleTrainingApp";
 import ZipcodeForm from "./components/ZipcodeForm";
 import ProductSearch from "./components/Sample";
 import ColorDisplay from "./components/ ColorDisplay";
+import ColorPicker from "./components/ColorPicker";
 
 const MyPractice: React.FC = () => {
   return (
@@ -61,6 +62,8 @@ const MyPractice: React.FC = () => {
       <ProductSearch />
       <hr />
       <ColorDisplay />
+      <hr />
+      <ColorPicker />
     </>
   );
 };
