@@ -18,6 +18,9 @@ function ColorPicker() {
       case "blue":
         setDisplayColor("bg-blue-500");
         break;
+      case "pink":
+        setDisplayColor("bg-pink-500");
+        break;
     }
   };
 
@@ -33,6 +36,7 @@ function ColorPicker() {
         <option value="red">赤色</option>
         <option value="blue">青色</option>
         <option value="green">緑色</option>
+        <option value="pink">ピンク色</option>
       </select>
       {/* 色に応じて背景色が切り替わるdivを作ろう */}
       <div className={`w-10 h-10 ${displayColor || "bg-amber-50"} `}></div>
