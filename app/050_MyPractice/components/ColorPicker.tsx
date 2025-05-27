@@ -21,6 +21,9 @@ function ColorPicker() {
       case "pink":
         setDisplayColor("bg-pink-500");
         break;
+      case "purple":
+        setDisplayColor("bg-purple-500");
+        break;
     }
   };
 
