@@ -18,6 +18,7 @@ import ZipcodeForm from "./components/ZipcodeForm";
 import ProductSearch from "./components/Sample";
 import ColorDisplay from "./components/ ColorDisplay";
 import ColorPicker from "./components/ColorPicker";
+import TextProgress from "./components/TextProgress";
 
 const MyPractice: React.FC = () => {
   return (
@@ -64,6 +65,8 @@ const MyPractice: React.FC = () => {
       <ColorDisplay />
       <hr />
       <ColorPicker />
+      <hr />
+      <TextProgress />
     </>
   );
 };
