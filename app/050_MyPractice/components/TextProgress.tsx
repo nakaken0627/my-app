@@ -14,7 +14,7 @@ function TextProgress() {
     <div className="flex justify-center">
       {/* 入力フィールドでテキストを入力できるようにしましょう */}
       <input
-        className="border border-amber-50"
+        className="border border-b-white"
         type="text"
         value={inputString}
         onChange={(e) => setInputString(e.target.value)}
@@ -25,6 +25,7 @@ function TextProgress() {
           className={` bg-blue-500 h-5 rounded-full }`}
           style={{ width: `${calcPercent}%` }}
         ></div>
+        進捗度：
         {calcPercent}%
       </div>
     </div>
