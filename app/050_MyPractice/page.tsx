@@ -19,6 +19,7 @@ import ProductSearch from "./components/Sample";
 import ColorDisplay from "./components/ ColorDisplay";
 import ColorPicker from "./components/ColorPicker";
 import TextProgress from "./components/TextProgress";
+import TextCounter from "./components/TextCounter";
 
 const MyPractice: React.FC = () => {
   return (
@@ -67,6 +68,8 @@ const MyPractice: React.FC = () => {
       <ColorPicker />
       <hr />
       <TextProgress />
+      <hr />
+      <TextCounter />
     </>
   );
 };
