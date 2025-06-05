@@ -20,6 +20,7 @@ import ColorDisplay from "./components/ ColorDisplay";
 import ColorPicker from "./components/ColorPicker";
 import TextProgress from "./components/TextProgress";
 import TextCounter from "./components/TextCounter";
+import QuoteButton from "./components/QuoteButton";
 
 const MyPractice: React.FC = () => {
   return (
@@ -70,6 +71,8 @@ const MyPractice: React.FC = () => {
       <TextProgress />
       <hr />
       <TextCounter />
+      <hr />
+      <QuoteButton />
     </>
   );
 };
