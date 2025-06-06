@@ -21,6 +21,7 @@ import ColorPicker from "./components/ColorPicker";
 import TextProgress from "./components/TextProgress";
 import TextCounter from "./components/TextCounter";
 import QuoteButton from "./components/QuoteButton";
+import DynamicCheckbox from "./components/DynamicCheckbox";
 
 const MyPractice: React.FC = () => {
   return (
@@ -73,6 +74,8 @@ const MyPractice: React.FC = () => {
       <TextCounter />
       <hr />
       <QuoteButton />
+      <hr />
+      <DynamicCheckbox />
     </>
   );
 };
