@@ -20,9 +20,9 @@ function TextProgress() {
         onChange={(e) => setInputString(e.target.value)}
       />
       {/* テキスト入力のプログレスを表すバーを表示しましょう */}
-      <div className="w-2/4 bg-gray-200 rounded-full h-5 text-center">
+      <div className="w-2/4 bg-gray-300 rounded-full h-5 text-center">
         <div
-          className={` bg-blue-500 h-5 rounded-full }`}
+          className={` bg-blue-600 h-5 rounded-full }`}
           style={{ width: `${calcPercent}%` }}
         ></div>
         進捗度：
