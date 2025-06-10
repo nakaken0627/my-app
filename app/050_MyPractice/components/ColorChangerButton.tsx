@@ -5,13 +5,12 @@ import React, { useState } from "react";
 const colorList = ["gray", "red", "blue", "green", "yellow"];
 
 function ColorChangerButton() {
-  // ここにstateを作成して初期値を設定してください
   const [color, setColor] = useState("gray");
-
-  // ここにクリックで色を切り替える関数を作成してください
 
   const handleClick = () => {
     console.log(color);
+
+    // 色のリストから現在の色の次の色を取得。初期表示をindex＝０は除外されてループが適用される
     const checkIndex = colorList.indexOf(color);
     let nextIndex = checkIndex + 1;
     if (nextIndex >= colorList.length) {
