@@ -2,7 +2,16 @@
 
 import React, { useState } from "react";
 
-const colorList = ["gray", "red", "blue", "green", "yellow"];
+const colorList = [
+  "gray",
+  "red",
+  "blue",
+  "green",
+  "yellow",
+  "purple",
+  "pink",
+  "orange",
+];
 
 function ColorChangerButton() {
   const [color, setColor] = useState("gray");

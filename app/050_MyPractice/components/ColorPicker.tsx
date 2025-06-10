@@ -3,10 +3,10 @@
 import React, { useState } from "react";
 
 function ColorPicker() {
-  //# 選択された色を管理するstateを用意しよう
   const [displayColor, setDisplayColor] = useState<string>("");
 
-  //# select要素が変化したときのハンドラ関数を追加しよう
+  // select要素のonChangeイベントで呼び出される関数を定義しよう
+  // 選択された色に応じて、displayColorの状態を更新する
   const handleColor = (e: React.ChangeEvent<HTMLSelectElement>) => {
     switch (e.target.value) {
       case "red":
