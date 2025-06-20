@@ -39,3 +39,15 @@ export const addressChecker = (address: string) => {
   const result = myRe.test(address);
   console.log(result);
 };
+
+const number = 15;
+
+export const conditionalCalculator = (num: number) => {
+  if (num > 10) {
+    return num * 2;
+  }
+  return num;
+};
+
+const result = conditionalCalculator(number);
+console.log(result);
