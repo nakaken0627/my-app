@@ -51,3 +51,10 @@ export const conditionalCalculator = (num: number) => {
 
 const result = conditionalCalculator(number);
 console.log(result);
+
+export const extractYears = (date: string) => {
+  return Number(date.split("-")[0]);
+};
+const dateString = "2023-02-23";
+const result1 = extractYears(dateString);
+console.log(result1);
