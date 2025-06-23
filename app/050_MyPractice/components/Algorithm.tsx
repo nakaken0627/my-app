@@ -72,3 +72,10 @@ data.forEach((item) => {
     result.no += 1;
   }
 });
+
+const string = "JavaScript";
+const pickFirstString = (arg: string) => {
+  return arg.slice(0, 1);
+};
+const result2 = pickFirstString(string);
+console.log(result2);
