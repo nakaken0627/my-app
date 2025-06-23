@@ -40,7 +40,7 @@ export const addressChecker = (address: string) => {
   console.log(result);
 };
 
-const number = 15;
+// const number = 15;
 
 export const conditionalCalculator = (num: number) => {
   if (num > 10) {
@@ -49,8 +49,8 @@ export const conditionalCalculator = (num: number) => {
   return num;
 };
 
-const result = conditionalCalculator(number);
-console.log(result);
+// const result = conditionalCalculator(number);
+// console.log(result);
 
 export const extractYears = (date: string) => {
   return Number(date.split("-")[0]);
@@ -58,3 +58,17 @@ export const extractYears = (date: string) => {
 const dateString = "2023-02-23";
 const result1 = extractYears(dateString);
 console.log(result1);
+
+const data = [
+  { id: 1, vote: "yes" },
+  { id: 2, vote: "no" },
+  { id: 3, vote: "yes" },
+];
+const result = { yes: 0, no: 0 };
+data.forEach((item) => {
+  if (item.vote === "yes") {
+    result.yes += 1;
+  } else {
+    result.no += 1;
+  }
+});
