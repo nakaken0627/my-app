@@ -79,3 +79,28 @@ const pickFirstString = (arg: string) => {
 };
 const result2 = pickFirstString(string);
 console.log(result2);
+
+// ① 元となるオブジェクトを定義
+const originalObj = { a: 1, b: { c: 2, d: { e: 3 } } };
+type OriginalObj = { [value: string]: number | OriginalObj };
+
+// ② 提供された関数を確認し、バグを特定・修正してね！
+function cloneObj(obj: OriginalObj, depth = 1) {
+  if (depth === 0 || typeof obj !== "object" || obj === null) {
+    return obj;
+  }
+
+  const result: OriginalObj = {};
+  for (const key in obj) {
+    const value = obj[key];
+    if (typeof value === "object" && value !== null) {
+      result[key] = cloneObj(value, depth - 1);
+    } else {
+      result[key] = value;
+    }
+  }
+  return result;
+}
+
+// ③ 関数の実行
+console.log(cloneObj(originalObj, 2));
