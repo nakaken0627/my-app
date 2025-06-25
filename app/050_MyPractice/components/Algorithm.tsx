@@ -101,6 +101,11 @@ function cloneObj(obj: OriginalObj, depth = 1) {
   }
   return result;
 }
-
 // ③ 関数の実行
 console.log(cloneObj(originalObj, 2));
+
+const integerChecker = (num: number) => {
+  return Number.isInteger(num);
+};
+
+console.log(integerChecker(10));
