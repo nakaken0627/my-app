@@ -109,3 +109,11 @@ const integerChecker = (num: number) => {
 };
 
 console.log(integerChecker(10));
+
+export const averageNum = (arr: number[]) => {
+  const total = arr.reduce((acc, cur) => {
+    return acc + cur;
+  });
+
+  return total / arr.length;
+};
