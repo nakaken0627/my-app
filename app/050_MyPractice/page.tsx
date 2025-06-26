@@ -23,7 +23,8 @@ import TextCounter from "./components/TextCounter";
 import QuoteButton from "./components/QuoteButton";
 import DynamicCheckbox from "./components/DynamicCheckbox";
 import ColorChangerButton from "./components/ColorChangerButton";
-import { Algorithm } from "./components/algorithm";
+import ClickMessage from "./components/ClickMessage";
+import { Algorithm } from "./components/Algorithm";
 
 const MyPractice: React.FC = () => {
   return (
@@ -80,6 +81,8 @@ const MyPractice: React.FC = () => {
       <DynamicCheckbox />
       <hr />
       <ColorChangerButton />
+      <hr />
+      <ClickMessage />
       <hr />
       <Algorithm />
     </>
