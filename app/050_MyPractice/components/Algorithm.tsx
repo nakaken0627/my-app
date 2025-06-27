@@ -117,3 +117,13 @@ export const averageNum = (arr: number[]) => {
 
   return total / arr.length;
 };
+
+const regex = new RegExp("0-9");
+
+export const numChecker = (str: string) => {
+  return regex.test(str);
+};
+
+export const trimBlank = (str: string) => {
+  return str.replace(/\s+/g, "");
+};
