@@ -127,3 +127,21 @@ export const numChecker = (str: string) => {
 export const trimBlank = (str: string) => {
   return str.replace(/\s+/g, "");
 };
+
+type Object = {
+  name: string;
+  age: number;
+};
+
+export const deduplicateObjects = (arr: Object[]) => {
+  const newArr: Object[] = [];
+  arr.map((obj: Object) => {
+    const isExistingArr = newArr.find(
+      (item) => item.name === obj.name && item.age === obj.age
+    );
+    if (!isExistingArr) {
+      newArr.push(obj);
+    }
+  });
+  return newArr;
+};
