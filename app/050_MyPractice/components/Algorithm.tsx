@@ -145,3 +145,7 @@ export const deduplicateObjects = (arr: Object[]) => {
   });
   return newArr;
 };
+
+export const calcDiscountPrice = (price: number, discountRate: number) => {
+  return price - (price * discountRate) / 100;
+};
