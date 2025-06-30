@@ -149,3 +149,11 @@ export const deduplicateObjects = (arr: Object[]) => {
 export const calcDiscountPrice = (price: number, discountRate: number) => {
   return price - (price * discountRate) / 100;
 };
+
+export const checkSignalColor = (color: string) => {
+  if (color === "red") {
+    return "止まれ";
+  } else if (color === "blue") {
+    return "進め";
+  }
+};
