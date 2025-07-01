@@ -157,3 +157,9 @@ export const checkSignalColor = (color: string) => {
     return "進め";
   }
 };
+
+export const sumArray = (arr: number[]) => {
+  arr.reduce((sum, num) => {
+    return sum + num;
+  }, 0);
+};
