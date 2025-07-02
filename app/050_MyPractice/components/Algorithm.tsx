@@ -168,3 +168,20 @@ export const countTrue = (students: boolean[]) => {
   const newArray = students.filter((student) => student === true);
   return newArray.length;
 };
+
+import { readFileSync } from "fs";
+
+const lines = readFileSync("/dev/stdin", "utf8").split("\n");
+const count = parseInt(lines[0], 10);
+console.log(count);
+
+for (let i = 0; i < count; i++) {
+  const num = parseFloat(lines[i + 1]);
+  if (num === 0) {
+    console.log(`${num}は0`);
+  } else if (num > 0) {
+    console.log(`${num}はプラス`);
+  } else {
+    console.log(`${num}はマイナス`);
+  }
+}
