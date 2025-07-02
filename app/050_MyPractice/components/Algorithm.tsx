@@ -163,3 +163,8 @@ export const sumArray = (arr: number[]) => {
     return sum + num;
   }, 0);
 };
+
+export const countTrue = (students: boolean[]) => {
+  const newArray = students.filter((student) => student === true);
+  return newArray.length;
+};
