@@ -12,8 +12,13 @@ reader.on("line", (line) => {
   lines.push(line);
 });
 reader.on("close", () => {
-  const a = lines[0];
-  const b = lines[1];
+  const num = parseInt(lines[0]);
 
-  console.log(b - a);
+  for (let i = 0; i < num; i++) {
+    const val = lines[i + 1].split(" ");
+    const name = val[0];
+    const age = parseInt(val[1]);
+
+    console.log(`${name} ${age + 1}`);
+  }
 });
