@@ -185,3 +185,7 @@ for (let i = 0; i < count; i++) {
     console.log(`${num}はマイナス`);
   }
 }
+
+export const calcTotalPrice = (price: number, discount: number) => {
+  return price - price * Math.floor(discount / 100);
+};
