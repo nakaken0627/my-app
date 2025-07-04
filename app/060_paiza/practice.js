@@ -15,10 +15,29 @@ reader.on("close", () => {
   const num = parseInt(lines[0]);
 
   for (let i = 0; i < num; i++) {
-    const val = lines[i + 1].split(" ");
-    const name = val[0];
-    const age = parseInt(val[1]);
+    const info = lines[i + 1].split(" ");
+    const splitTime = info[0].split(":");
+    const startHour = parseInt(splitTime[0]); //13
+    const startMinute = parseInt(splitTime[1]); //00
+    const workHour = parseInt(info[1]); //1
+    const workMinute = parseInt(info[2]); //30
 
-    console.log(`${name} ${age + 1}`);
+    const calcHour = toString(
+      startHour + workHour + (Math.floor((startMinute + workMinute) / 60) % 24)
+    );
+    const calcMinute = toString((startMinute + workMinute) % 60);
+
+    let nextHour = 0;
+    let nextMinute = 0;
+
+    if (calcHour.length < 2) {
+      nextHour = "0" + calcHour;
+    }
+
+    if (calcMinute.length < 2) {
+      nextMinute = "0" + calcMinute;
+    }
+
+    console.log(`${nextHour}:${nextMinute}`);
   }
 });
