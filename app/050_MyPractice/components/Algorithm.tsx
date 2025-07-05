@@ -189,3 +189,7 @@ for (let i = 0; i < count; i++) {
 export const calcTotalPrice = (price: number, discount: number) => {
   return price - price * Math.floor(discount / 100);
 };
+
+export const combineName = (firstName: string, lastName: string) => {
+  return `${firstName} ${lastName}`;
+};
