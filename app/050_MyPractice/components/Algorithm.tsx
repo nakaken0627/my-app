@@ -195,12 +195,11 @@ export const combineName = (firstName: string, lastName: string) => {
 };
 
 export const changeEvenNum = (num: number[]) => {
-  num.map((n, index) => {
+  return num.map((n) => {
     if (n % 2 === 0) {
-      return;
+      return n;
     } else {
-      return (num[index] = n + 1);
+      return n + 1;
     }
-    return num;
   });
 };
