@@ -193,3 +193,14 @@ export const calcTotalPrice = (price: number, discount: number) => {
 export const combineName = (firstName: string, lastName: string) => {
   return `${firstName} ${lastName}`;
 };
+
+export const changeEvenNum = (num: number[]) => {
+  num.map((n, index) => {
+    if (n % 2 === 0) {
+      return;
+    } else {
+      return (num[index] = n + 1);
+    }
+    return num;
+  });
+};
