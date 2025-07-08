@@ -203,3 +203,12 @@ export const changeEvenNum = (num: number[]) => {
     }
   });
 };
+
+export const convertToInitials = (namesArray: string[]) => {
+  return namesArray.map((name) => {
+    return name
+      .split(" ")
+      .map((n) => n.charAt(0).toUpperCase())
+      .join(".");
+  });
+};
