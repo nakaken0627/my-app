@@ -222,3 +222,7 @@ console.log(r);
 export const trimText = (text: string) => {
   return text.trim();
 };
+
+export const changeNum = (num: number) => {
+  return Math.abs(num);
+};
