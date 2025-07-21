@@ -213,7 +213,7 @@ export const convertToInitials = (namesArray: string[]) => {
   });
 };
 
-const numbers = [5, 12, 8, 130, 44];
+const numbers = [5, 12, 8, 130, 44, 1, 3, 7, 9, 11, 15];
 
 const isLargeNumber = (num: number) => num > 10;
 const r = numbers.find(isLargeNumber);
