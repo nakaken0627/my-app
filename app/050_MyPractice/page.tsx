@@ -85,6 +85,7 @@ const MyPractice: React.FC = () => {
       <ClickMessage />
       <hr />
       <Algorithm />
+      <hr />
     </>
   );
 };
