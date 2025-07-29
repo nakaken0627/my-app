@@ -71,3 +71,16 @@ const ZipcodeForm = () => {
 };
 
 export default ZipcodeForm;
+
+const yourObject = {
+  // 中に含まれるプロパティを記述
+  user: {
+    info: {
+      name: "Taro",
+      location: "Tokyo",
+    },
+  },
+};
+
+// user.locationを取得しconsole.logで出力
+console.log(yourObject.user.info.location);
