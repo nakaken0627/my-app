@@ -84,3 +84,7 @@ const yourObject = {
 
 // user.locationを取得しconsole.logで出力
 console.log(yourObject.user.info.location);
+
+export const createNum = (inputStr: string) => {
+  return parseInt(inputStr);
+};
