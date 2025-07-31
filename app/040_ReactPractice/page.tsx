@@ -1,4 +1,5 @@
 import App from "./components/App";
+import { Clock } from "./components/Clock";
 import RandomizeWords from "./components/RandomizeWords";
 
 const ReactPractice = () => {
@@ -7,6 +8,8 @@ const ReactPractice = () => {
       <App />
       <hr />
       <RandomizeWords />
+      <hr />
+      <Clock />
     </div>
   );
 };
