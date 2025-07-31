@@ -88,3 +88,8 @@ console.log(yourObject.user.info.location);
 export const createNum = (inputStr: string) => {
   return parseInt(inputStr);
 };
+
+export const sumLengths = (arr: string[]) => {
+  const total = arr.reduce((sum, str) => sum + str.length, 0);
+  return total;
+};
