@@ -2,27 +2,16 @@
 
 import React, { useState } from "react";
 
-const colorList = [
-  "gray",
-  "red",
-  "blue",
-  "green",
-  "yellow",
-  "purple",
-  "pink",
-  "orange",
-];
+const colorList = ["gray", "red", "blue", "green", "yellow", "purple", "pink"];
 
 function ColorChangerButton() {
   const [color, setColor] = useState("gray");
 
   const handleClick = () => {
-    console.log(color);
-
     // 色のリストから現在の色の次の色を取得。初期表示をindex＝０は除外されてループが適用される
     const checkIndex = colorList.indexOf(color);
     let nextIndex = checkIndex + 1;
-    if (nextIndex >= colorList.length) {
+    if (nextIndex > colorList.length) {
       nextIndex = 0;
     }
 

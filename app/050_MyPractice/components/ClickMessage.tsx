@@ -17,7 +17,7 @@ function ClickMessage() {
       <button onClick={handleClick}>クリックしてみよう！</button>
       {clickCount === 0 ? (
         <p>まだクリックされていません。</p>
-      ) : clickCount < 5 ? (
+      ) : clickCount < 10 ? (
         <p>{clickCount}回クリックされました ! </p>
       ) : (
         <p>5回クリックを超えました ! すごい！</p>
