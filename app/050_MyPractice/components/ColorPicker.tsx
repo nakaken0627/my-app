@@ -10,19 +10,19 @@ function ColorPicker() {
   const handleColor = (e: React.ChangeEvent<HTMLSelectElement>) => {
     switch (e.target.value) {
       case "red":
-        setDisplayColor("bg-red-500");
+        setDisplayColor("bg-red-400");
         break;
       case "green":
-        setDisplayColor("bg-green-500");
+        setDisplayColor("bg-green-400");
         break;
       case "blue":
-        setDisplayColor("bg-blue-500");
+        setDisplayColor("bg-blue-400");
         break;
       case "pink":
-        setDisplayColor("bg-pink-500");
+        setDisplayColor("bg-pink-400");
         break;
       case "purple":
-        setDisplayColor("bg-purple-500");
+        setDisplayColor("bg-purple-400");
         break;
     }
   };
