@@ -20,7 +20,7 @@ function ClickMessage() {
       ) : clickCount < 10 ? (
         <p>{clickCount}回クリックされました ! </p>
       ) : (
-        <p>5回クリックを超えました ! すごい！</p>
+        <p>5回クリックを超えました ! すばらしい！</p>
       )}
     </div>
   );

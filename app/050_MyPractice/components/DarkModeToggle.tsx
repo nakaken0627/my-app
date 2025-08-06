@@ -17,7 +17,7 @@ function DarkModeToggle() {
       {/*👇クリックでダークモードを切り替えるボタンを作ろう！*/}
       <button
         onClick={() => setDarkMode((prev) => !prev)}
-        className="px-4 py-2 bg-blue-500 text-white rounded"
+        className="px-4 py-2 bg-blue-600 text-white rounded"
       >
         {`${title}に切り替え`}
       </button>
