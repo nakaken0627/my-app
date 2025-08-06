@@ -226,3 +226,7 @@ export const trimText = (text: string) => {
 export const changeNum = (num: number) => {
   return Math.abs(num);
 };
+
+export const randomNum = (numbers: number[]) => {
+  return numbers.sort(() => 0.5 - Math.random());
+};
