@@ -260,3 +260,25 @@ export const wordCounter = (str: string) => {
 export const inputWordCounter = (sentence: string, str: string) => {
   return sentence.split(str).length - 1;
 };
+
+type User = {
+  id: number;
+  name: string;
+};
+
+type NewArray = {
+  userId: number;
+  userName: string;
+};
+
+export const defineUserList = (users: User[]) => {
+  const newArray: NewArray[] = [];
+  users.map((user) => {
+    const newObject = {
+      userId: user.id,
+      userName: user.name,
+    };
+    newArray.push(newObject);
+  });
+  return newArray;
+};
