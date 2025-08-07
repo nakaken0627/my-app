@@ -249,3 +249,10 @@ export const calculateAverageScores = (dataArray: DataArray[]) => {
   });
   return data;
 };
+
+export const wordCounter = (str: string) => {
+  const splitStr = str
+    .split(/\s+|[.,!?;]+/)
+    .filter((word) => word.length !== 0);
+  return splitStr.length;
+};
