@@ -256,3 +256,7 @@ export const wordCounter = (str: string) => {
     .filter((word) => word.length !== 0);
   return splitStr.length;
 };
+
+export const inputWordCounter = (sentence: string, str: string) => {
+  return sentence.split(str).length - 1;
+};
