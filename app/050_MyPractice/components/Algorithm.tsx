@@ -230,3 +230,22 @@ export const changeNum = (num: number) => {
 export const randomNum = (numbers: number[]) => {
   return numbers.sort(() => 0.5 - Math.random());
 };
+
+type DataArray = {
+  id: number;
+  name: string;
+  scores?: number[];
+  averageScores: number;
+};
+
+export const calculateAverageScores = (dataArray: DataArray[]) => {
+  dataArray.map((item) => {
+    if (!item.scores) return;
+    const total = item.scores.reduce((acc, score) => acc + score, 0);
+    const average = total / item.scores.length;
+    delete item.scores;
+    item.averageScores = Math.round(average * 100) / 100;
+    return item;
+  });
+  return data;
+};
