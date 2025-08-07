@@ -282,3 +282,7 @@ export const defineUserList = (users: User[]) => {
   });
   return newArray;
 };
+
+export const formatOrderId = (id: number, width: number) => {
+  return String(id).padStart(width, "0");
+};
