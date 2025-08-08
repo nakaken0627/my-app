@@ -286,3 +286,11 @@ export const defineUserList = (users: User[]) => {
 export const formatOrderId = (id: number, width: number) => {
   return String(id).padStart(width, "0");
 };
+
+export const formatJPY = (num: number) => {
+  return new Intl.NumberFormat("ja-JP", {
+    style: "currency",
+    currency: "JPY",
+    maximumFractionDigits: 0,
+  }).format(num);
+};
