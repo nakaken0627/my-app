@@ -294,3 +294,7 @@ export const formatJPY = (num: number) => {
     maximumFractionDigits: 0,
   }).format(num);
 };
+
+export const extractYear = (date: Date): number => {
+  return date.getFullYear();
+};
