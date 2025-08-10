@@ -298,3 +298,8 @@ export const formatJPY = (num: number) => {
 export const extractYear = (date: Date): number => {
   return date.getFullYear();
 };
+
+export function addSan(name: string) {
+  // ここにコードを書いてください。
+  return String(name).concat("", "さん");
+}
