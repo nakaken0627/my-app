@@ -332,3 +332,16 @@ args.map((a) => {
     console.log("blank");
   }
 });
+
+const judge = { strike: 0, ball: 0 };
+// const args = lines.slice(1);
+
+args.map((a) => {
+  if (a === "strike") {
+    judge.strike += 1;
+    console.log(judge.strike >= 3 ? "out!" : "strike!");
+  } else if (a === "ball") {
+    judge.ball += 1;
+    console.log(judge.ball >= 4 ? "fourball!" : "ball!");
+  }
+});
