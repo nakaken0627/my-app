@@ -359,3 +359,29 @@ mWeights.map((a) => {
     console.log(calcNum);
   }
 });
+
+//タグで囲まれた文字列を取得する
+const keys = lines[0].split(" ");
+const startKey = keys[0];
+const endKey = keys[1];
+
+const strings = lines[1];
+
+const array = strings.split(startKey).slice(1);
+array.map((a) => {
+  const extractedWord = a.split(endKey);
+  console.log(extractedWord[0]);
+});
+
+//タグに囲まれた文字列を取得（タグ箇所に関するヒントあり）
+const tags = lines[0].split(" ");
+const startTag = tags[0];
+
+const letters = lines[1];
+
+const nums = lines[2].split(" ");
+const startNum = parseInt(nums[0], 10) + startTag.length - 1;
+const endNum = parseInt(nums[1], 10) - 1;
+
+const extractedWord = letters.slice(startNum, endNum);
+console.log(extractedWord === "" ? "<blank>" : extractedWord);
