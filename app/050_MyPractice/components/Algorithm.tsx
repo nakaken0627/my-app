@@ -303,3 +303,7 @@ export function addSan(name: string) {
   // ここにコードを書いてください。
   return String(name).concat("", "さん");
 }
+
+export const textSlicer = (str: string, num: number) => {
+  return str.slice(0, num);
+};
