@@ -345,3 +345,17 @@ args.map((a) => {
     console.log(judge.ball >= 4 ? "fourball!" : "ball!");
   }
 });
+
+//パイザのみかんの重量に応じた仕分け問題
+const firstLine = lines[0].split(" ");
+const gap = parseInt(firstLine[0], 10);
+const mWeights = lines.slice(1);
+
+mWeights.map((a) => {
+  const calcNum = Math.round(parseInt(a, 10) / gap) * gap;
+  if (calcNum === 0) {
+    console.log(gap);
+  } else {
+    console.log(calcNum);
+  }
+});
