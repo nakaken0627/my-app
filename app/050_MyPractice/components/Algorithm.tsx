@@ -307,3 +307,28 @@ export function addSan(name: string) {
 export const textSlicer = (str: string, num: number) => {
   return str.slice(0, num);
 };
+
+const first = lines[0];
+const args = lines.slice(2);
+const second = first.slice(-4);
+const third = first.slice(-3);
+
+const secondChecker = (num: string) => String(num).indexOf(second);
+const thirdChecker = (num: string) => String(num).indexOf(third);
+
+args.map((a) => {
+  if (a === first) {
+    console.log("first");
+  } else if (
+    parseInt(a) === parseInt(first, 10) - 1 ||
+    parseInt(a) === parseInt(first, 10) + 1
+  ) {
+    console.log("adjacent");
+  } else if (secondChecker(a) !== -1) {
+    console.log("second");
+  } else if (thirdChecker(a) !== -1) {
+    console.log("third");
+  } else {
+    console.log("blank");
+  }
+});
