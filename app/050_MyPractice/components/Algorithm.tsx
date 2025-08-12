@@ -385,3 +385,24 @@ const endNum = parseInt(nums[1], 10) - 1;
 
 const extractedWord = letters.slice(startNum, endNum);
 console.log(extractedWord === "" ? "<blank>" : extractedWord);
+
+//複数の開始位置を取得
+//縦に並べて出力する
+const [firstTag, endTag] = lines[0].split(" ");
+const S = lines[1];
+
+const arrayNum = [];
+let startIndex = 0;
+
+while (true) {
+  const startPos = S.indexOf(firstTag, startIndex);
+  if (startPos === -1) break;
+
+  const endPos = S.indexOf(endTag, startPos + firstTag.length);
+  if (endPos === -1) break;
+
+  arrayNum.push(`${startPos + 1} ${endPos + 1}`);
+  startIndex = endPos + endTag.length;
+}
+
+console.log(arrayNum.join("\n"));
