@@ -406,3 +406,19 @@ while (true) {
 }
 
 console.log(arrayNum.join("\n"));
+
+//jsGym
+export const getFileExtension = (str: string) => {
+  const slicePos = str.lastIndexOf(".");
+
+  if (slicePos === -1 || str[0] === "." || str[str.length] === ".") {
+    return "";
+  } else {
+    return str.slice(slicePos + 1);
+  }
+};
+
+export function introduce(name: string, age: number) {
+  // ここに自己紹介メッセージを返す処理を書く
+  return `私の名前は${name}で、${age}歳です。`;
+}
