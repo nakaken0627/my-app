@@ -422,3 +422,9 @@ export function introduce(name: string, age: number) {
   // ここに自己紹介メッセージを返す処理を書く
   return `私の名前は${name}で、${age}歳です。`;
 }
+
+export const findLongestWord = (words: string[]) => {
+  words.reduce((a, b) => {
+    return a.length > b.length ? a : b;
+  }, "");
+};
