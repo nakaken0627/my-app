@@ -1,3 +1,5 @@
+//ハコベルの技術課題
+
 //ひらがなのみを対象とする正規表現
 export const hiraganaRegex = /^\p{scx=Hiragana}+$/u;
 
