@@ -428,3 +428,12 @@ export const findLongestWord = (words: string[]) => {
     return a.length > b.length ? a : b;
   }, "");
 };
+
+export const getFileExtension2 = (str: string) => {
+  const result = str.lastIndexOf(".");
+  if (result === -1 || result === 0 || result === str.length - 1) {
+    return "";
+  } else {
+    return str.slice(result + 1);
+  }
+};
