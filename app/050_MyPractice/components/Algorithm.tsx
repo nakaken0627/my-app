@@ -437,3 +437,7 @@ export const getFileExtension2 = (str: string) => {
     return str.slice(result + 1);
   }
 };
+
+export const hasDuplicate = (arr: number[]) => {
+  return new Set(arr).size !== arr.length;
+};
