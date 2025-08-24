@@ -441,3 +441,7 @@ export const getFileExtension2 = (str: string) => {
 export const hasDuplicate = (arr: number[]) => {
   return new Set(arr).size !== arr.length;
 };
+
+export const clamp = (val: number, min: number, max: number) => {
+  return Math.max(Math.min(val, max), min);
+};
