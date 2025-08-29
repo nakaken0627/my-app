@@ -150,3 +150,11 @@ function FilterableProductTable({ products }: { products: Product[] }) {
 export default function App() {
   return <FilterableProductTable products={PRODUCTS} />;
 }
+
+export const truncateWithEllipsis = (str: string, max: number) => {
+  if (str.length > max) {
+    return str.slice(0, max) + "...";
+  } else {
+    return str;
+  }
+};
