@@ -158,3 +158,7 @@ export const truncateWithEllipsis = (str: string, max: number) => {
     return str;
   }
 };
+
+export const getQueryParam = (str: string, k: string) => {
+  return new URL(str).searchParams.get(k);
+};
