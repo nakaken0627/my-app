@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { Card, Move, searchLocation } from "./searchLocation";
 
 type Product = {
   category: string;
@@ -162,3 +163,20 @@ export const truncateWithEllipsis = (str: string, max: number) => {
 export const getQueryParam = (str: string, k: string) => {
   return new URL(str).searchParams.get(k);
 };
+
+const cards: Card[] = [
+  [6, 0, 0],
+  [7, 1, 0],
+  [5, 2, 0],
+  [2, 3, 0],
+  [1, 1, 1],
+  [3, 0, 2],
+  [4, 0, 1],
+];
+const moves: Move[] = [
+  [6, 0, 0, 1, 1],
+  [4, 0, 1, 2, 0],
+];
+const query = 6;
+
+console.log(searchLocation(cards, moves, query));
