@@ -180,3 +180,7 @@ const moves: Move[] = [
 const query = 6;
 
 console.log(searchLocation(cards, moves, query));
+
+export const changeFormat = (str: Date) => {
+  return str.toLocaleDateString();
+};
