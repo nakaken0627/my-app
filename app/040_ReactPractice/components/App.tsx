@@ -181,6 +181,9 @@ const query = 6;
 
 console.log(searchLocation(cards, moves, query));
 
-export const changeFormat = (str: Date) => {
-  return str.toLocaleDateString();
+export const changeFormat = (date: Date) => {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, "0");
+  const d = String(date.getDate()).padStart(2, "0");
+  return `${y}/${m}/${d}`;
 };
