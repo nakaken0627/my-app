@@ -187,3 +187,7 @@ export const changeFormat = (date: Date) => {
   const d = String(date.getDate()).padStart(2, "0");
   return `${y}/${m}/${d}`;
 };
+
+export const compact = (array: string[]) => {
+  return array.filter(Boolean);
+};
