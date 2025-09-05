@@ -191,3 +191,7 @@ export const changeFormat = (date: Date) => {
 export const compact = (array: string[]) => {
   return array.filter(Boolean);
 };
+
+export const hasOwn = (obj: Record<string, unknown>, key: string) => {
+  return Object.hasOwn(obj, key);
+};
