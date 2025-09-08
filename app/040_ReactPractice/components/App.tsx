@@ -195,3 +195,11 @@ export const compact = (array: string[]) => {
 export const hasOwn = (obj: Record<string, unknown>, key: string) => {
   return Object.hasOwn(obj, key);
 };
+
+export const truncatedWithEllipsis = (str: string, max: number) => {
+  if (str.length > max) {
+    return str.slice(0, max) + "...";
+  } else {
+    return str;
+  }
+};
