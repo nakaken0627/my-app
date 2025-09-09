@@ -24,11 +24,12 @@ const targetUser = [];
 
 //②扱いやすいデータの形に整形する
 //ユーザー毎かつコース毎にデータを構造化して登録する
-const newObj = {};
+const newObj: { [key: string]: { [key: string]: string[][] } } = {};
 
 for (const log of arr) {
   const [id, corse, ...rest] = log;
 
+  //ここはエラー解消が必要
   if (!newObj[id]) {
     newObj[id] = {};
   }
@@ -67,5 +68,8 @@ for (const id in newObj) {
 }
 
 //⑥idの若い順にソートして改行区切りで出力する
-const result = targetUser.sort((a, b) => a - b).join("\n");
+const result = targetUser
+  .map(Number)
+  .sort((a, b) => a - b)
+  .join("\n");
 console.log(result);
