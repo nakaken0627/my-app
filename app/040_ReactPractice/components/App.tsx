@@ -207,3 +207,7 @@ export const truncatedWithEllipsis = (str: string, max: number) => {
 export const flattenOnce = (targetArr: number[][]) => {
   return targetArr.flat();
 };
+
+export const getLast = (array: number[]) => {
+  return array.at(-1);
+};
