@@ -25,6 +25,7 @@ import DynamicCheckbox from "./components/DynamicCheckbox";
 import ColorChangerButton from "./components/ColorChangerButton";
 import ClickMessage from "./components/ClickMessage";
 import { ClickableStarRating } from "./components/ClickableStarRating";
+import { UuidGenerator } from "./components/UuidGenerator";
 // import { Algorithm } from "./components/Algorithm";
 
 const MyPractice: React.FC = () => {
@@ -88,6 +89,8 @@ const MyPractice: React.FC = () => {
       {/* <Algorithm /> */}
       <hr />
       <ClickableStarRating />
+      <hr />
+      <UuidGenerator />
     </>
   );
 };
