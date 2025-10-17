@@ -26,6 +26,7 @@ import ColorChangerButton from "./components/ColorChangerButton";
 import ClickMessage from "./components/ClickMessage";
 import { ClickableStarRating } from "./components/ClickableStarRating";
 import { UuidGenerator } from "./components/UuidGenerator";
+import SortToggleList from "./components/SortToggleList";
 // import { Algorithm } from "./components/Algorithm";
 
 const MyPractice: React.FC = () => {
@@ -91,6 +92,8 @@ const MyPractice: React.FC = () => {
       <ClickableStarRating />
       <hr />
       <UuidGenerator />
+      <hr />
+      <SortToggleList />
     </>
   );
 };
