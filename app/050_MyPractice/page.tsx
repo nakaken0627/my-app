@@ -27,6 +27,7 @@ import ClickMessage from "./components/ClickMessage";
 import { ClickableStarRating } from "./components/ClickableStarRating";
 import { UuidGenerator } from "./components/UuidGenerator";
 import SortToggleList from "./components/SortToggleList";
+import NumberOnlyInput from "./components/NumberOnlyInput";
 // import { Algorithm } from "./components/Algorithm";
 
 const MyPractice: React.FC = () => {
@@ -94,6 +95,8 @@ const MyPractice: React.FC = () => {
       <UuidGenerator />
       <hr />
       <SortToggleList />
+      <hr />
+      <NumberOnlyInput />
     </>
   );
 };
