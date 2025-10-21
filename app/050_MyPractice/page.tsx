@@ -28,6 +28,7 @@ import { ClickableStarRating } from "./components/ClickableStarRating";
 import { UuidGenerator } from "./components/UuidGenerator";
 import SortToggleList from "./components/SortToggleList";
 import NumberOnlyInput from "./components/NumberOnlyInput";
+import DebouncedPreview from "./components/DebouncedPreview";
 // import { Algorithm } from "./components/Algorithm";
 
 const MyPractice: React.FC = () => {
@@ -97,6 +98,8 @@ const MyPractice: React.FC = () => {
       <SortToggleList />
       <hr />
       <NumberOnlyInput />
+      <hr />
+      <DebouncedPreview />
     </>
   );
 };
