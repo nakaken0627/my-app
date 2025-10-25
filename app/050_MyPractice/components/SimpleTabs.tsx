@@ -22,7 +22,8 @@ function SimpleTabs() {
     <div className="max-w-md mx-auto p-4">
       <div
         role="tablist"
-        className="flex space-x-4 mb-4 border-b border-gray-700"
+        aria-label="Sample Tabs"
+        className="flex space-x-4 mb-4 border-b border-gray-700 "
       >
         <button
           role="tab"
@@ -31,7 +32,9 @@ function SimpleTabs() {
           aria-controls="panel1"
           onClick={() => handleTabClick("profile")}
           className={
-            tab === "profile" ? "border-b-2 border-blue-600 text-blue-600 " : ""
+            tab === "profile"
+              ? "border-b-2 border-blue-600 text-blue-600 "
+              : "border-b border-gray-700 text-gray-500"
           }
         >
           プロフィール
@@ -45,7 +48,7 @@ function SimpleTabs() {
           className={
             tab === "notifications"
               ? "border-b-2 border-blue-600 text-blue-600 "
-              : ""
+              : "border-b border-gray-700 text-gray-500"
           }
         >
           通知
@@ -57,7 +60,7 @@ function SimpleTabs() {
         aria-labelledby="tab1"
         hidden={tab !== "profile"}
       >
-        <p>プロフィール: 「ようこそ、ユーザーさん」</p>
+        <p>ようこそ、ユーザーさん</p>
       </div>
       <div
         id="panel2"
@@ -65,7 +68,7 @@ function SimpleTabs() {
         aria-labelledby="tab2"
         hidden={tab !== "notifications"}
       >
-        <p>通知: 「通知はありません」</p>
+        <p>通知はありません</p>
       </div>
     </div>
   );
