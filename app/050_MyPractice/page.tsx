@@ -30,6 +30,7 @@ import SortToggleList from "./components/SortToggleList";
 import NumberOnlyInput from "./components/NumberOnlyInput";
 import DebouncedPreview from "./components/DebouncedPreview";
 import SimpleTabs from "./components/SimpleTabs";
+import LanguageSelectBasic from "./components/LanguageSelectBasic";
 // import { Algorithm } from "./components/Algorithm";
 
 const MyPractice: React.FC = () => {
@@ -103,6 +104,8 @@ const MyPractice: React.FC = () => {
       <DebouncedPreview />
       <hr />
       <SimpleTabs />
+      <hr />
+      <LanguageSelectBasic />
     </>
   );
 };
